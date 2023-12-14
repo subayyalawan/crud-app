@@ -7,8 +7,6 @@ const Create = ({ onAddItem, setErrMsg}) => {
 
   const HandleCreate = () => {
     if (newItem.body && newItem.title) {
-      console.log(newItem)
-      // post("/posts", newItem)
       post("/Crud", newItem)
       .then((resp) => {
 

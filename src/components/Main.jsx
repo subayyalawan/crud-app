@@ -9,7 +9,6 @@ const Main = () => {
 
   const getApiData = async () => {
     try {
-      // const resp = await get("/posts");
       const resp = await get("/Crud");
       setMyData(resp.data);
     } catch (error) {
@@ -26,7 +25,6 @@ const Main = () => {
   };
 
   const HandleEdit = (cardIndex, newBody, newTitle) => {
-    // put(`/posts/${cardIndex}`, {title:newTitle, body:newBody})
     put(`/Crud/${cardIndex}`, { title: newTitle, body: newBody });
   };
 
@@ -36,7 +34,6 @@ const Main = () => {
     setMyData(updatedCards);
 
     try {
-      // del(`/posts/${cardIndex}`)
       del(`/Crud/${cardIndex}`);
       getApiData();
     } catch (error) {
